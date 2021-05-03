@@ -15,7 +15,7 @@ def arrangeExcel(path):
     file = openpyxl.Workbook()
     sheet1 = file.active    
     sheet1.title = "test"
-    path1 = "/Users/h0057/Desktop/%s.xlsx" % 'test'
+    path1 = "%s.xlsx" % 'test'
     list1 = list(set1)
     for idx in range(0, len(list1)):
         sheet1.cell(row=idx+1, column=1, value= list1[idx])
@@ -41,7 +41,7 @@ def outputStrings(path):
 
 
 # output excel 
-# arrangeExcel("/Users/h0057/Desktop/VT-Ios文字翻译表_FIN.xlsx")
+# arrangeExcel("path")
 
 #output .strings
-outputStrings("/Users/h0057/Desktop/VT-iOS.xlsx")
+outputStrings("path")
